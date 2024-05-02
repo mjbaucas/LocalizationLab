@@ -1,5 +1,4 @@
 # Import libraries
-import os
 import re
 import subprocess
 from matplotlib import pyplot as pl
