@@ -16,7 +16,7 @@ def findRSSI():
     for i in range(len(result_string)):
         if result_string[i] == "\"Anchor":  
             if result_string[i+1] == "1\"":
-                values = int(result_string[i-3])
+                value = int(result_string[i-3])
                 
     # print(value) # Debug: Check value obtained
     return value
