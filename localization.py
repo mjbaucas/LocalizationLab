@@ -48,8 +48,8 @@ def trilateration(d1, d2, d3, p, q, r):
     x = (d1**2 - d2**2 + p**2) / (2.0 * p)                          # Calculate x coordinate 
     y = ((d1**2 - d3**2 + q**2 + r**2) / (2.0 * r)) - ((q / r) * x) # calculate y coordinate 
     
-    reciever = [x,y]
-    return reciever
+    receiver = [x,y]
+    return receiver
     
 # Obtain RSSI and corresponding distances
 values = findRSSI()  
@@ -63,19 +63,19 @@ q = 0      # This is zero because anchors are assumed to be exactly on the axes
 r = y_max # Known distance between nachor in the y axis and origin 
 
 # Obtain point of interest using trilateration
-reciever = trilateration(d1, d2, d3, p, q, r)
-print(reciever) # Debug: Check reciever coordinate
+receiver = trilateration(d1, d2, d3, p, q, r)
+print(receiver) # Debug: Check receiver coordinate
 
-# Plot anchors and reciever on the coordinate plane
+# Plot anchors and receiver on the coordinate plane
 pl.plot(nodes[0], nodes[1], 'bs')       # Anchor 1
 pl.plot(nodes[2], nodes[3], 'rs')       # Anchor 2 
 pl.plot(nodes[4], nodes[5], 'gs')       # Anchor 3
 pl.plot(nodes[6], nodes[7], 'ys')       # Anchor 4
-pl.plot(reciever[0], reciever[1], 'k^') # Reciever 
+pl.plot(receiver[0], receiver[1], 'k^') # Receiver 
 
 pl.xlabel('X')
 pl.ylabel('Y')
-pl.legend(('Anchor 1', 'Anchor 2', 'Anchor 3', 'Anchor 4', 'Reciever'))
+pl.legend(('Anchor 1', 'Anchor 2', 'Anchor 3', 'Anchor 4', 'Receiver'))
 pl.grid()
 pl.show()
 pl.savefig("lab3.png")
