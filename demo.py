@@ -33,5 +33,5 @@ def pathloss(rssi):
 # Obtain RSSI and corresponding distances
 value = findRSSI()  
 distance = pathloss(value) 
-print("RSSI: " + value + " dBm")
-print("Distance: " + distance + " metres")
+print("RSSI: " + str(value) + " dBm")
+print("Distance: " + str(distance) + " metres")
