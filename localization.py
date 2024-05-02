@@ -34,7 +34,7 @@ def findRSSI():
     # print(values) # Debug: Check values obtained
     return values
 
-# Calculatin function for the pathloss distance based on the rssi input
+# Calculation function for the pathloss distance based on the rssi input
 def pathloss(rssi):
     C = -50.0 # Approximately the expected RSSI value at 1 metre
     n = 2.0   # Pathloss exponent (free space = 2)
