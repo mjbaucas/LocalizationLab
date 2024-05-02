@@ -6,8 +6,8 @@ import subprocess
 from matplotlib import pyplot as pl
 
 # Define coordinates and measurements
-x_max = 6.5 # Change this based on actual width of space created by anchors
-y_max = 8.5 # Change this based on actual length of space created by anchors 
+x_max = 4.27 # Change this based on actual length of space in x-axis created by anchors
+y_max = 3.35 # Change this based on actual length of space in y-axis created by anchors 
 nodes = [0, 0, x_max, 0, 0, y_max, x_max, y_max]
 
 # Function for obtaining RSS values of anchors
